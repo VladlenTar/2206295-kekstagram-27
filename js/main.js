@@ -1,8 +1,10 @@
 const getRandomNumber = function (minVlaue, maxValue) {
-  let randomNumber = Math.floor(Math.random() * (maxValue - minVlaue + 1)) + minVlaue
-  if (randomNumber < 0) {
-    randomNumber = NaN;
+  if (minVlaue < 0 || maxValue < 0) {
+    return NaN;
   }
+  minVlaue = Math.ceil(Math.min(a, b));
+  maxValue = Math.floor(Math.max(a, b));
+  let randomNumber = Math.floor(Math.random() * (maxValue - minVlaue + 1)) + minVlaue
   return randomNumber;
 }
 
